@@ -1,0 +1,30 @@
+{
+  "name": "evidence-chain-local-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "node --no-warnings server/index.js",
+    "dev:client": "vite --host 127.0.0.1",
+    "start": "node --no-warnings server/index.js",
+    "test": "vitest run",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0",
+    "express": "^4.21.2",
+    "jszip": "^3.10.1",
+    "lucide-react": "^0.468.0",
+    "multer": "^2.0.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.6.0",
+    "concurrently": "^9.1.2",
+    "vite": "^6.0.7",
+    "vitest": "^2.1.8"
+  }
+}

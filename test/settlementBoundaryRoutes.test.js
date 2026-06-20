@@ -158,7 +158,7 @@ describe('settlement spreadsheet uploads', () => {
     const tmpDir = path.join(dataDir, 'tmp');
     const remainingTmpFiles = fs.existsSync(tmpDir) ? await fsp.readdir(tmpDir) : [];
 
-    expect(response.status).toBe(500);
+    expect(response.status).toBe(400);
     expect(remainingTmpFiles).toEqual([]);
   });
 });

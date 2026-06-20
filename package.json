@@ -3,11 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "dev": "concurrently \"npm:dev:server\" \"npm:dev:client\"",
     "dev:server": "node --no-warnings server/index.js",
     "dev:client": "vite --host 127.0.0.1",
     "start": "node --no-warnings server/index.js",
+    "lint": "node scripts/check-quality.mjs",
     "test": "vitest run",
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1"

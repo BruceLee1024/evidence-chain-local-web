@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 
 describe('package page layout contract', () => {
-  const appSource = readFileSync(new URL('../src/App.jsx', import.meta.url), 'utf8');
+  const appSource = readFileSync(new URL('../src/pages/PackagePage.jsx', import.meta.url), 'utf8');
   const styles = readFileSync(new URL('../src/styles.css', import.meta.url), 'utf8');
 
   it('keeps settlement packaging as a command rail, result board, and review rail', () => {

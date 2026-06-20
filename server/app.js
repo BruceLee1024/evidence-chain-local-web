@@ -3,41 +3,24 @@ import fs from 'node:fs';
 import fsp from 'node:fs/promises';
 import path from 'node:path';
 import multer from 'multer';
-import ExcelJS from 'exceljs';
-import JSZip from 'jszip';
 import { DATA_DIR, TMP_DIR } from './config.js';
 import { getDb } from './db.js';
 import { attachFileToEvidence, mapUploadFields, persistUpload } from './fileStore.js';
-import { checkSettlementCompleteness } from './ai/checker.js';
-import { buildAiMatchCandidates } from './ai/matcher.js';
 import { extractEvidenceDraft } from './ai/ocr.js';
 import { buildAiConfig, createAiProvider, publicAiConfig } from './ai/provider.js';
 import { getAiSettings, saveAiSettings } from './ai/settings.js';
-import { buildExportTree } from './lib/exportTree.js';
-import { matchEvidenceForItems } from './lib/matching.js';
 import { rankEvidenceSemantically } from './lib/semanticSearch.js';
-import { buildSettlementWorkbook } from './lib/settlementWorkbook.js';
-import { inferColumns, mapRowsToSettlementItems, parseDelimitedTable } from './lib/settlementImport.js';
+import { createSettlementRouter } from './routes/settlements.js';
 import {
   addLocation,
   createEvidence,
   createProject,
-  createSettlementSession,
-  deleteSettlementLink,
-  getEvidenceForProject,
   getOverview,
   getProject,
-  getSettlementItemForSession,
-  getSettlementSession,
-  getSettlementSessionForProject,
-  insertSettlementLink,
   listEvidence,
   listFilesForEvidence,
   listLocations,
   listProjects,
-  listSettlementItems,
-  listSettlementLinks,
-  listSettlementSessions,
   searchEvidence
 } from './repository.js';
 
@@ -340,7 +323,7 @@ app.post('/api/projects/:projectId/settlements/parse-file', requireProject, uplo
     const parsed = await parseSpreadsheetFile(req.file.path, req.file.originalname);
     res.json({ ...parsed, columns: inferColumns(parsed.headers) });
   } catch (error) {
-    next(error);
+    res.status(400).json({ error: 'Excel 文件解析失败，请检查文件格式' });
   } finally {
     if (req.file) await fsp.unlink(req.file.path).catch(() => {});
   }

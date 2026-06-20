@@ -188,6 +188,18 @@ export function getSettlementSession(id) {
   };
 }
 
+export function getSettlementSessionForProject(projectId, sessionId) {
+  const session = getDb().prepare(`
+    SELECT id, project_id AS projectId, name, created_at AS createdAt
+    FROM settlement_sessions WHERE id = ? AND project_id = ?
+  `).get(sessionId, projectId);
+  if (!session) return null;
+  return {
+    ...session,
+    items: listSettlementItems(session.id)
+  };
+}
+
 export function listSettlementSessions(projectId) {
   return getDb().prepare(`
     SELECT id, project_id AS projectId, name, created_at AS createdAt
@@ -202,6 +214,53 @@ export function listSettlementItems(sessionId) {
       amount, payload_json AS payloadJson, status, created_at AS createdAt
     FROM settlement_items WHERE session_id = ? ORDER BY row_number
   `).all(sessionId).map((row) => ({ ...row, payload: parsePayload(row.payloadJson) }));
+}
+
+export function getSettlementItemForSession(sessionId, itemId) {
+  const row = getDb().prepare(`
+    SELECT id, session_id AS sessionId, row_number AS rowNumber, name, location,
+      normalized_location AS normalizedLocation, start_date AS startDate, end_date AS endDate,
+      amount, payload_json AS payloadJson, status, created_at AS createdAt
+    FROM settlement_items WHERE session_id = ? AND id = ?
+  `).get(sessionId, itemId);
+  return row ? { ...row, payload: parsePayload(row.payloadJson) } : null;
+}
+
+export function getEvidenceForProject(projectId, evidenceId) {
+  const record = getDb().prepare(`
+    SELECT id, project_id AS projectId, type, code, title, location,
+      normalized_location AS normalizedLocation, evidence_date AS evidenceDate,
+      end_date AS endDate, amount, payload_json AS payloadJson, created_at AS createdAt
+    FROM evidence WHERE project_id = ? AND id = ?
+  `).get(projectId, evidenceId);
+  return hydrateEvidence(record);
+}
+
+export function getEvidenceEmbedding(evidenceId, model, searchText) {
+  const row = getDb().prepare(`
+    SELECT embedding_json AS embeddingJson FROM evidence_embeddings
+    WHERE evidence_id = ? AND model = ? AND search_text = ?
+  `).get(evidenceId, model, searchText);
+  if (!row) return null;
+  try {
+    const parsed = JSON.parse(row.embeddingJson);
+    return Array.isArray(parsed) ? parsed : null;
+  } catch {
+    return null;
+  }
+}
+
+export function saveEvidenceEmbedding({ evidenceId, model, searchText, embedding }) {
+  const now = nowIso();
+  getDb().prepare(`
+    INSERT INTO evidence_embeddings (evidence_id, embedding_json, search_text, model, created_at, updated_at)
+    VALUES (?, ?, ?, ?, ?, ?)
+    ON CONFLICT(evidence_id) DO UPDATE SET
+      embedding_json = excluded.embedding_json,
+      search_text = excluded.search_text,
+      model = excluded.model,
+      updated_at = excluded.updated_at
+  `).run(evidenceId, JSON.stringify(embedding || []), searchText, model, now, now);
 }
 
 export function insertSettlementLink({ itemId, evidenceId, confidence, matchKind, status, source }) {

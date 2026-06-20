@@ -28,12 +28,39 @@ export const api = {
     request(`/api/projects/${projectId}/material-records`, { method: 'POST', body: formData }),
   createMonthly: (projectId, formData) =>
     request(`/api/projects/${projectId}/monthly-measurements`, { method: 'POST', body: formData }),
+  aiStatus: () => request('/api/ai/status'),
+  aiSettings: () => request('/api/ai/settings'),
+  saveAiSettings: (payload) =>
+    request('/api/ai/settings', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }),
+  testAiSettings: (payload) =>
+    request('/api/ai/settings/test', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }),
+  ocrExtract: (evidenceType, files) => {
+    const formData = new FormData();
+    formData.append('evidenceType', evidenceType);
+    files.forEach((file) => formData.append('files', file));
+    return request('/api/ai/ocr/extract', { method: 'POST', body: formData });
+  },
   search: ({ projectId, q, type }) => {
     const params = new URLSearchParams();
     if (projectId) params.set('projectId', projectId);
     if (q) params.set('q', q);
     if (type) params.set('type', type);
     return request(`/api/search?${params.toString()}`);
+  },
+  semanticSearch: ({ projectId, q, type }) => {
+    const params = new URLSearchParams();
+    if (projectId) params.set('projectId', projectId);
+    if (q) params.set('q', q);
+    if (type) params.set('type', type);
+    return request(`/api/search/semantic?${params.toString()}`);
   },
   parsePaste: (projectId, text) =>
     request(`/api/projects/${projectId}/settlements/parse-paste`, {
@@ -69,6 +96,10 @@ export const api = {
       method: 'POST',
       body: formData
     }),
+  rematchAi: (projectId, sessionId) =>
+    request(`/api/projects/${projectId}/settlements/${sessionId}/rematch-ai`, { method: 'POST' }),
+  checkCompleteness: (projectId, sessionId) =>
+    request(`/api/projects/${projectId}/settlements/${sessionId}/check-completeness`),
   preview: (projectId, sessionId) => request(`/api/projects/${projectId}/settlements/${sessionId}/preview`)
 };
 

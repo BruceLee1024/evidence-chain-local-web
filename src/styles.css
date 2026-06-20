@@ -591,6 +591,33 @@ select option {
   color: #ff9ba2;
 }
 
+.ai-recognize-button {
+  margin-top: 12px;
+}
+
+.ai-result-note {
+  background: rgba(33, 180, 123, 0.12);
+  border: 1px solid rgba(33, 180, 123, 0.28);
+  border-radius: 8px;
+  color: #bcebd7;
+  display: grid;
+  gap: 5px;
+  margin-top: 10px;
+  padding: 10px 12px;
+}
+
+.ai-result-note.error {
+  background: var(--red-soft);
+  border-color: rgba(239, 107, 115, 0.34);
+  color: #ffb3b8;
+}
+
+.ai-result-note strong,
+.ai-result-note span {
+  display: block;
+  font-size: 13px;
+}
+
 .evidence-list,
 .session-list,
 .link-list,
@@ -801,6 +828,10 @@ select option {
   margin-top: 10px;
 }
 
+.package-ai-actions {
+  margin-bottom: 12px;
+}
+
 .package-actions button,
 .package-actions .button {
   padding-inline: 10px;
@@ -924,6 +955,35 @@ tr.selected {
 .status-badge.unmatched {
   background: var(--red-soft);
   color: #ff9ba2;
+}
+
+.completeness-badge {
+  border-radius: 999px;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 900;
+  padding: 5px 8px;
+  white-space: nowrap;
+}
+
+.completeness-badge.complete {
+  background: var(--green-soft);
+  color: #62dfab;
+}
+
+.completeness-badge.incomplete {
+  background: var(--amber-soft);
+  color: #ffd076;
+}
+
+.completeness-badge.critical {
+  background: var(--red-soft);
+  color: #ff9ba2;
+}
+
+.completeness-badge.muted {
+  background: rgba(53, 77, 103, 0.58);
+  color: var(--muted);
 }
 
 .active-item {
@@ -1085,6 +1145,104 @@ tr.selected {
   gap: 10px;
   grid-template-columns: 1fr 160px 110px;
   margin-top: 14px;
+}
+
+.toggle-field {
+  align-items: center;
+  color: #c9dcf1;
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 800;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.toggle-field input {
+  accent-color: var(--accent);
+}
+
+.ai-status-box {
+  background: rgba(13, 27, 45, 0.62);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--muted);
+  display: grid;
+  gap: 7px;
+  padding: 12px;
+}
+
+.ai-status-box strong {
+  color: #f2f7ff;
+}
+
+.ai-status-box span,
+.ai-status-box p {
+  font-size: 13px;
+  margin: 0;
+}
+
+.ai-settings-form {
+  background: rgba(13, 27, 45, 0.62);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+}
+
+.ai-status-head {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.ai-status-head strong {
+  color: #f2f7ff;
+}
+
+.ai-status-head span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.ai-settings-form .field {
+  gap: 6px;
+}
+
+.ai-settings-form .field input,
+.ai-settings-form .field select {
+  min-height: 36px;
+}
+
+.ai-feature-grid {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ai-feature-grid label {
+  align-items: center;
+  color: #c9dcf1;
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 800;
+  gap: 7px;
+}
+
+.ai-feature-grid input {
+  accent-color: var(--accent);
+}
+
+.ai-settings-actions {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ai-settings-actions button {
+  padding-inline: 10px;
+  width: 100%;
 }
 
 @media (max-width: 900px) {

@@ -1,7 +1,10 @@
 import fs from 'node:fs';
 import crypto from 'node:crypto';
-import { DatabaseSync } from 'node:sqlite';
+import { createRequire } from 'node:module';
 import { DATA_DIR, DB_PATH } from './config.js';
+
+const require = createRequire(import.meta.url);
+const { DatabaseSync } = require('node:sqlite');
 
 let db;
 
@@ -100,6 +103,41 @@ function migrate(database) {
       source TEXT NOT NULL,
       created_at TEXT NOT NULL,
       UNIQUE(item_id, evidence_id)
+    );
+
+    CREATE TABLE IF NOT EXISTS evidence_embeddings (
+      evidence_id TEXT PRIMARY KEY REFERENCES evidence(id) ON DELETE CASCADE,
+      embedding_json TEXT NOT NULL,
+      search_text TEXT NOT NULL,
+      model TEXT NOT NULL,
+      created_at TEXT NOT NULL,
+      updated_at TEXT NOT NULL
+    );
+
+    CREATE TABLE IF NOT EXISTS ai_call_logs (
+      id TEXT PRIMARY KEY,
+      feature TEXT NOT NULL,
+      model TEXT NOT NULL,
+      prompt_tokens INTEGER NOT NULL DEFAULT 0,
+      completion_tokens INTEGER NOT NULL DEFAULT 0,
+      duration_ms INTEGER,
+      success INTEGER NOT NULL DEFAULT 1,
+      error TEXT,
+      created_at TEXT NOT NULL
+    );
+
+    CREATE TABLE IF NOT EXISTS ai_settings (
+      id TEXT PRIMARY KEY,
+      provider TEXT NOT NULL,
+      api_key TEXT,
+      base_url TEXT NOT NULL,
+      model TEXT NOT NULL,
+      vision_model TEXT NOT NULL,
+      embedding_model TEXT NOT NULL,
+      supports_vision INTEGER NOT NULL DEFAULT 0,
+      features_json TEXT NOT NULL,
+      timeout_ms INTEGER NOT NULL DEFAULT 15000,
+      updated_at TEXT NOT NULL
     );
   `);
 }

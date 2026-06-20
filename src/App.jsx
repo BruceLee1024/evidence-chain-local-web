@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 import { api, sampleSettlementText } from './api.js';
+import { resolveNavigationState } from './navigationState.js';
 
 const navItems = [
   { id: 'dashboard', label: '项目主页', icon: Home },
@@ -59,6 +60,7 @@ export default function App() {
   const [loading, setLoading] = useState(false);
 
   const activeProject = projects.find((project) => project.id === projectId);
+  const navigationState = resolveNavigationState({ page, hasProject: Boolean(projectId) });
 
   useEffect(() => {
     refreshProjects();
@@ -130,8 +132,8 @@ export default function App() {
       <main>
         <header className="topbar">
           <div>
-            <h1>{activeProject ? activeProject.name : '创建第一个项目'}</h1>
-            <p>{activeProject ? `${activeProject.code || '未填编号'} · ${activeProject.manager || '未填负责人'}` : '先建立项目，再录入证据和组卷'}</p>
+            <h1>{activeProject ? activeProject.name : navigationState.headerTitle}</h1>
+            <p>{activeProject ? `${activeProject.code || '未填编号'} · ${activeProject.manager || '未填负责人'}` : navigationState.headerDescription}</p>
           </div>
           <div className="topbar-actions">
             <select value={projectId} onChange={(event) => setProjectId(event.target.value)}>
@@ -151,7 +153,9 @@ export default function App() {
         {toast && <div className="toast">{toast}</div>}
         {loading && <div className="loading-line" />}
 
-        {!projectId ? (
+        {!projectId && navigationState.mode === 'project-required' ? (
+          <ProjectRequiredPage state={navigationState} onCreateProject={() => setPage('settings')} />
+        ) : !projectId ? (
           <SettingsPage onCreated={(project) => {
             refreshProjects();
             setProjectId(project.id);
@@ -191,6 +195,26 @@ export default function App() {
         )}
       </main>
     </div>
+  );
+}
+
+function ProjectRequiredPage({ state, onCreateProject }) {
+  return (
+    <section className="workspace project-gate">
+      <div className="panel project-gate-panel">
+        <SectionTitle icon={FolderOpen} title={state.headerTitle} />
+        <h2>{state.gateTitle}</h2>
+        <p>{state.gateDescription}</p>
+        <button onClick={onCreateProject}>
+          <Plus size={17} />
+          {state.actionLabel}
+        </button>
+      </div>
+      <aside className="workspace-side project-gate-side">
+        <SectionTitle icon={ShieldCheck} title="项目边界" />
+        <p>当前还没有选中的项目。证据、部位、组卷批次和导出文件都会保存在项目下面。</p>
+      </aside>
+    </section>
   );
 }
 
@@ -255,7 +279,7 @@ function EvidencePage({ projectId, evidence, locations, runAction }) {
   const [mode, setMode] = useState('variation');
   const visibleEvidence = evidence.filter((item) => evidenceTypes.includes(item.type));
   return (
-    <section className="workspace">
+    <section className="workspace evidence-workspace">
       <div className="workspace-main">
         <div className="tabs">
           {evidenceTypes.map((type) => (

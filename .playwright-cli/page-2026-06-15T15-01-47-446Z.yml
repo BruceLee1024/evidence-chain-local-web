@@ -1,0 +1,663 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]: ← → 翻页 · B 静态 · ESC 索引
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - generic [ref=e8]: Classroom Lecture · Argument Writing
+        - generic [ref=e9]: 45 MIN · 01 / 26
+      - generic [ref=e10]:
+        - generic [ref=e11]: 跟着韩愈学吵架
+        - heading "从《师说》看 满分议论文的黄金结构" [level=1] [ref=e12]:
+          - text: 从《师说》看
+          - text: 满分议论文的黄金结构
+        - paragraph [ref=e13]: 不是背古文，而是拆一篇 1200 年前的高分议论文。
+        - generic [ref=e14]:
+          - generic [ref=e15]: 适用对象 · 高中生
+          - generic [ref=e16]: ·
+          - generic [ref=e17]: 三段式结构 / 对比论证 / 结构性驳论
+      - generic [ref=e18]:
+        - generic [ref=e19]: "Teacher Notes: Press N"
+        - generic [ref=e20]: Han Yu · Shi Shuo
+      - text: 讲课稿 · N 关闭
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - generic [ref=e23]: Hook · 考场如战场
+        - generic [ref=e24]: 02 / 26
+      - generic [ref=e25]:
+        - generic [ref=e26]: 先把对手叫上场
+        - heading "吃苦耐劳 已经过时了吗？" [level=1] [ref=e27]:
+          - text: 吃苦耐劳
+          - text: 已经过时了吗？
+        - paragraph [ref=e28]: 如果有人说：现代社会拼的是选择、资源、运气，吃苦耐劳只是无效内卷。你打算怎么反驳？
+      - generic [ref=e29]:
+        - generic [ref=e30]: Opening Question
+        - generic [ref=e31]: Debate Before Writing
+      - text: 讲课稿 · N 关闭
+    - generic [ref=e32]:
+      - generic [ref=e33]:
+        - generic [ref=e34]: Diagnosis · 常见病
+        - generic [ref=e35]: 03 / 26
+      - generic [ref=e36]:
+        - generic [ref=e37]: 很多作文输在这里
+        - heading "议论文三大毛病" [level=2] [ref=e38]
+        - generic [ref=e39]:
+          - generic [ref=e40]:
+            - generic [ref=e41]: "01"
+            - generic [ref=e42]: 开头磨叽
+            - generic [ref=e43]: 铺垫太久，迟迟不亮观点。阅卷老师看了半天，还不知道你要证明什么。
+          - generic [ref=e44]:
+            - generic [ref=e45]: "02"
+            - generic [ref=e46]: 中间打滚
+            - generic [ref=e47]: 只会重复观点，论据像散沙，没有层次，也没有推进感。
+          - generic [ref=e48]:
+            - generic [ref=e49]: "03"
+            - generic [ref=e50]: 结尾无力
+            - generic [ref=e51]: 最后只是喊口号，没有完成回扣、升级和收束。
+        - generic [ref=e52]: 更关键的问题是：很多文章只写“我要证明什么”，忘了写“别人会怎么反驳我”。
+      - generic [ref=e53]:
+        - generic [ref=e54]: Page 03 · Problem Diagnosis
+        - generic [ref=e55]: Structure Matters
+      - text: 讲课稿 · N 关闭
+    - generic [ref=e56]:
+      - generic [ref=e57]:
+        - generic [ref=e58]: Context · 韩愈的对手
+        - generic [ref=e59]: 04 / 26
+      - generic [ref=e60]:
+        - generic [ref=e61]:
+          - generic [ref=e62]:
+            - generic [ref=e63]: 1200 年前的现场
+            - heading "耻学于师" [level=2] [ref=e64]
+            - paragraph [ref=e65]: 当时士大夫阶层流行一种风气：向老师学习，尤其向年龄小、地位低的人学习，很丢脸。
+          - generic [ref=e66]:
+            - text: 韩愈不是温柔劝说，而是把这种风气当作错误观念，正面拆解、逐层驳斥。
+            - generic [ref=e67]: 《师说》作为结构性驳论范本
+        - generic [ref=e68]:
+          - generic [ref=e69]: False Belief
+          - generic [ref=e70]:
+            - text: 从师
+            - text: 等于
+            - text: 丢人？
+          - paragraph [ref=e71]: 韩愈要做的不是“解释老师很重要”，而是摧毁“向老师学习可耻”这套逻辑。
+      - generic [ref=e72]:
+        - generic [ref=e73]: Page 04 · Historical Opponent
+        - generic [ref=e74]: Wrong Climate, Clear Target
+      - text: 讲课稿 · N 关闭
+    - generic [ref=e75]:
+      - generic [ref=e76]:
+        - generic [ref=e77]: Structure · 全文总览
+        - generic [ref=e78]: 05 / 26
+      - generic [ref=e79]:
+        - generic [ref=e80]: 三段式议论文的标准答案
+        - heading "立骨 · 析理 · 证例 · 收束" [level=2] [ref=e81]
+        - generic [ref=e82]:
+          - generic [ref=e83]: 结构
+          - generic [ref=e84]: 《师说》段落
+          - generic [ref=e85]: 核心任务
+          - generic [ref=e86]: 写作启示
+          - generic [ref=e87]: 引论
+          - generic [ref=e88]: 第 1 段
+          - generic [ref=e89]: 立骨：提出中心论点，下定义，亮标准
+          - generic [ref=e90]: 开头要直接搭起判断标准
+          - generic [ref=e91]: 本论
+          - generic [ref=e92]: 第 2 段
+          - generic [ref=e93]: 析理：用三组对比批驳错误现象
+          - generic [ref=e94]: 主体要制造逻辑压力
+          - generic [ref=e95]: 深化
+          - generic [ref=e96]: 第 3 段
+          - generic [ref=e97]: 证例：举圣人例子，进一步论证
+          - generic [ref=e98]: 例子服务于驳论，不是装饰
+          - generic [ref=e99]: 结论
+          - generic [ref=e100]: 第 4 段
+          - generic [ref=e101]: 收束：重申主张，交代写作缘由
+          - generic [ref=e102]: 结尾完成回扣与落点
+        - paragraph [ref=e103]: 韩愈像下棋一样，提前预判对手每一步，然后一次性布下全篇逻辑阵。
+      - generic [ref=e104]:
+        - generic [ref=e105]: Page 05 · Macro Structure
+        - generic [ref=e106]: Argument Architecture
+      - text: 讲课稿 · N 关闭
+    - generic [ref=e107]:
+      - generic [ref=e108]:
+        - generic [ref=e109]: Act I · Opening Paragraph
+        - generic [ref=e110]: 06 / 26
+      - generic [ref=e111]:
+        - generic [ref=e112]: 第一段精讲
+        - heading "七句话 七种立论技法" [level=1] [ref=e113]:
+          - text: 七句话
+          - text: 七种立论技法
+        - paragraph [ref=e114]: 这一段最值得背的，不只是原文，而是每句话背后的写作功能。
+      - generic [ref=e115]:
+        - generic [ref=e116]: Act I · 立骨
+        - generic [ref=e117]: Definition, Premise, Standard
+      - text: 讲课稿 · N 关闭
+    - generic [ref=e118]:
+      - generic [ref=e119]:
+        - generic [ref=e120]: Text · 第一段原文
+        - generic [ref=e121]: 07 / 26
+      - generic [ref=e122]:
+        - generic [ref=e123]: 先看原文的骨架
+        - heading "每一句都在干活" [level=2] [ref=e124]
+        - generic [ref=e125]:
+          - generic [ref=e126]:
+            - generic [ref=e127]: "01"
+            - generic [ref=e128]: 古之学者必有师。
+            - generic [ref=e129]: 论点
+          - generic [ref=e130]:
+            - generic [ref=e131]: "02"
+            - generic [ref=e132]: 师者，所以传道受业解惑也。
+            - generic [ref=e133]: 定义
+          - generic [ref=e134]:
+            - generic [ref=e135]: "03"
+            - generic [ref=e136]: 人非生而知之者，孰能无惑？
+            - generic [ref=e137]: 前提
+          - generic [ref=e138]:
+            - generic [ref=e139]: "04"
+            - generic [ref=e140]: 惑而不从师，其为惑也，终不解矣。
+            - generic [ref=e141]: 后果
+          - generic [ref=e142]:
+            - generic [ref=e143]: "05"
+            - generic [ref=e144]: 生乎吾前，其闻道也固先乎吾，吾从而师之；生乎吾后，其闻道也亦先乎吾，吾从而师之。
+            - generic [ref=e145]: 标准
+          - generic [ref=e146]:
+            - generic [ref=e147]: "06"
+            - generic [ref=e148]: 吾师道也，夫庸知其年之先后生于吾乎？
+            - generic [ref=e149]: 驳疑
+          - generic [ref=e150]:
+            - generic [ref=e151]: "07"
+            - generic [ref=e152]: 是故无贵无贱，无长无少，道之所存，师之所存也。
+            - generic [ref=e153]: 升华
+      - generic [ref=e154]:
+        - generic [ref=e155]: Page 07 · Seven Sentences
+        - generic [ref=e156]: Every Sentence Has A Job
+      - text: 讲课稿 · N 关闭
+    - generic [ref=e157]:
+      - generic [ref=e158]:
+        - generic [ref=e159]: Method · 七句技法
+        - generic [ref=e160]: 08 / 26
+      - generic [ref=e161]:
+        - generic [ref=e162]: 可迁移的写法
+        - heading "不是翻译，是拆功能" [level=2] [ref=e163]
+        - generic [ref=e164]:
+          - generic [ref=e165]:
+            - generic [ref=e166]: "01"
+            - generic [ref=e167]: 开头亮观点
+            - generic [ref=e168]: 借“古之”“学者”带出权威感。
+          - generic [ref=e169]:
+            - generic [ref=e170]: "02"
+            - generic [ref=e171]: 关键词定义
+            - generic [ref=e172]: 先界定“师”，后面才有判断标准。
+          - generic [ref=e173]:
+            - generic [ref=e174]: "03"
+            - generic [ref=e175]: 建立共识
+            - generic [ref=e176]: 从人人承认的事实出发，降低阻力。
+          - generic [ref=e177]:
+            - generic [ref=e178]: "04"
+            - generic [ref=e179]: 推出后果
+            - generic [ref=e180]: 如果不从师，疑惑就永远不解。
+          - generic [ref=e181]:
+            - generic [ref=e182]: "05"
+            - generic [ref=e183]: 验证标准
+            - generic [ref=e184]: 前后两种场景，归到同一结论。
+          - generic [ref=e185]:
+            - generic [ref=e186]: "06"
+            - generic [ref=e187]: 预判反对
+            - generic [ref=e188]: 主动回应“年龄先后”的偏见。
+          - generic [ref=e189]:
+            - generic [ref=e190]: "07"
+            - generic [ref=e191]: 总结升华
+            - generic [ref=e192]: 从具体择师，上升到“道”的原则。
+        - generic [ref=e193]: 一句论点二定义，三设前提四讲弊。五举场景六驳疑，七句升华收全意。
+      - generic [ref=e194]:
+        - generic [ref=e195]: Page 08 · Writing Techniques
+        - generic [ref=e196]: Transferable Pattern
+      - text: 讲课稿 · N 关闭
+    - generic [ref=e197]:
+      - generic [ref=e198]:
+        - generic [ref=e199]: Formula · 开头流水线
+        - generic [ref=e200]: 09 / 26
+      - generic [ref=e201]:
+        - generic [ref=e202]: 把古文变成考场动作
+        - heading "七步写出一个硬开头" [level=2] [ref=e203]
+        - generic [ref=e204]:
+          - generic [ref=e205]: Opening Paragraph · 前四步先立住
+          - generic [ref=e206]:
+            - generic [ref=e207]:
+              - generic [ref=e208]: "01"
+              - generic [ref=e209]: 亮观点
+              - generic [ref=e210]: 先说你的判断，不绕路。
+            - generic [ref=e211]:
+              - generic [ref=e212]: "02"
+              - generic [ref=e213]: 下定义
+              - generic [ref=e214]: 把关键词说清，防止偷换概念。
+            - generic [ref=e215]:
+              - generic [ref=e216]: "03"
+              - generic [ref=e217]: 设前提
+              - generic [ref=e218]: 找一个大家承认的共同事实。
+            - generic [ref=e219]:
+              - generic [ref=e220]: "04"
+              - generic [ref=e221]: 讲弊端
+              - generic [ref=e222]: 说明不这样做会付出什么代价。
+        - generic [ref=e223]:
+          - generic [ref=e224]: Opening Paragraph · 后三步完成封口
+          - generic [ref=e225]:
+            - generic [ref=e226]:
+              - generic [ref=e227]: "05"
+              - generic [ref=e228]: 举场景
+              - generic [ref=e229]: 用不同场景验证同一个标准。
+            - generic [ref=e230]:
+              - generic [ref=e231]: "06"
+              - generic [ref=e232]: 驳偏见
+              - generic [ref=e233]: 主动回应最常见的反对意见。
+            - generic [ref=e234]:
+              - generic [ref=e235]: "07"
+              - generic [ref=e236]: 升华句
+              - generic [ref=e237]: 把具体观点提升成通用原则。
+      - generic [ref=e238]:
+        - generic [ref=e239]: Page 09 · Press Arrow To Reveal Steps
+        - generic [ref=e240]: Opening Pipeline
+      - text: 讲课稿 · N 关闭
+    - generic [ref=e241]:
+      - generic [ref=e242]:
+        - generic [ref=e243]: Act II · Body Paragraph
+        - generic [ref=e244]: 10 / 26
+      - generic [ref=e245]:
+        - generic [ref=e246]: 第二段精讲
+        - heading "三组对比 排山倒海" [level=1] [ref=e247]:
+          - text: 三组对比
+          - text: 排山倒海
+        - paragraph [ref=e248]: 一组对比只能说明一点，三组递进对比才能形成逻辑压力。
+      - generic [ref=e249]:
+        - generic [ref=e250]: Act II · 析理
+        - generic [ref=e251]: Contrast As Pressure
+      - text: 讲课稿 · N 关闭
+    - generic [ref=e252]:
+      - generic [ref=e253]:
+        - generic [ref=e254]: Overview · 三组对比
+        - generic [ref=e255]: 11 / 26
+      - generic [ref=e256]:
+        - generic [ref=e257]: 三维打击
+        - heading "从一个观点，扩成一张网" [level=2] [ref=e258]
+        - generic [ref=e259]:
+          - generic [ref=e260]:
+            - generic [ref=e261]: "01"
+            - generic [ref=e262]: 纵向比
+            - generic [ref=e263]: 古之圣人尚且从师，今之众人却耻学于师。结论：圣益圣，愚益愚。
+          - generic [ref=e264]:
+            - generic [ref=e265]: "02"
+            - generic [ref=e266]: 横向比
+            - generic [ref=e267]: 给孩子择师，却对自己耻师。结论：小学而大遗，未见其明。
+          - generic [ref=e268]:
+            - generic [ref=e269]: "03"
+            - generic [ref=e270]: 阶层比
+            - generic [ref=e271]: 百工不耻相师，士大夫群聚而笑。结论：其智反不能及。
+      - generic [ref=e272]:
+        - generic [ref=e273]: Page 11 · Three Contrasts
+        - generic [ref=e274]: Time, Object, Class
+      - text: 讲课稿 · N 关闭
+    - generic [ref=e275]:
+      - generic [ref=e276]:
+        - generic [ref=e277]: Contrast 01 · 古今对比
+        - generic [ref=e278]: 12 / 26
+      - generic [ref=e279]:
+        - generic [ref=e280]: 时间维度
+        - heading "越优秀，越从师" [level=2] [ref=e281]
+        - generic [ref=e282]:
+          - generic [ref=e283]:
+            - generic [ref=e284]: 古之圣人
+            - heading "其出人也远矣，犹且从师而问焉" [level=3] [ref=e285]
+            - paragraph [ref=e286]: 圣人已经远超常人，却仍然保持求教姿态。
+          - generic [ref=e287]:
+            - generic [ref=e288]: 今之众人
+            - heading "其下圣人也亦远矣，而耻学于师" [level=3] [ref=e289]
+            - paragraph [ref=e290]: 普通人本来更需要学习，却反而以从师为耻。
+        - generic [ref=e291]: 结论不是“圣人厉害”，而是：圣益圣，愚益愚。
+      - generic [ref=e292]:
+        - generic [ref=e293]: Page 12 · Vertical Contrast
+        - generic [ref=e294]: Past vs Present
+      - text: 讲课稿 · N 关闭
+    - generic [ref=e295]:
+      - generic [ref=e296]:
+        - generic [ref=e297]: Contrast 02 · 自身矛盾
+        - generic [ref=e298]: 13 / 26
+      - generic [ref=e299]:
+        - generic [ref=e300]: 对象维度
+        - heading "对孩子严格，对自己宽松" [level=2] [ref=e301]
+        - generic [ref=e302]:
+          - generic [ref=e303]:
+            - generic [ref=e304]: 爱其子
+            - heading "择师而教之" [level=3] [ref=e305]
+            - paragraph [ref=e306]: 孩子不懂句读，家长知道要给他找老师。
+          - generic [ref=e307]:
+            - generic [ref=e308]: 于其身
+            - heading "则耻师焉" [level=3] [ref=e309]
+            - paragraph [ref=e310]: 自己有更大的疑惑，却觉得从师丢脸。
+        - generic [ref=e311]: 韩愈抓住的是双重标准：小问题认真，大问题糊涂。
+      - generic [ref=e312]:
+        - generic [ref=e313]: Page 13 · Object Contrast
+        - generic [ref=e314]: Child vs Self
+      - text: 讲课稿 · N 关闭
+    - generic [ref=e315]:
+      - generic [ref=e316]:
+        - generic [ref=e317]: Contrast 03 · 阶层对比
+        - generic [ref=e318]: 14 / 26
+      - generic [ref=e319]:
+        - generic [ref=e320]: 身份维度
+        - heading "谁更像真正的学习者？" [level=2] [ref=e321]
+        - generic [ref=e322]:
+          - generic [ref=e323]:
+            - generic [ref=e324]: 百工之人
+            - heading "不耻相师" [level=3] [ref=e325]
+            - paragraph [ref=e326]: 职业地位被轻视，却能彼此学习、互相请教。
+          - generic [ref=e327]:
+            - generic [ref=e328]: 士大夫之族
+            - heading "群聚而笑之" [level=3] [ref=e329]
+            - paragraph [ref=e330]: 自以为高贵，却被身份焦虑困住。
+        - generic [ref=e331]: 这一组对比的力度在于反转：自称君子者，智反不能及。
+      - generic [ref=e332]:
+        - generic [ref=e333]: Page 14 · Class Contrast
+        - generic [ref=e334]: Workers vs Elites
+      - text: 讲课稿 · N 关闭
+    - generic [ref=e335]:
+      - generic [ref=e336]:
+        - generic [ref=e337]: Tool · 三对矛盾
+        - generic [ref=e338]: 15 / 26
+      - generic [ref=e339]:
+        - generic [ref=e340]: 写不下去时，画一张表
+        - heading "考场本论的续航方法" [level=2] [ref=e341]
+        - generic [ref=e342]:
+          - generic [ref=e343]: 比较方式
+          - generic [ref=e344]: 怎么找
+          - generic [ref=e345]: 写作效果
+          - generic [ref=e346]: 纵向比
+          - generic [ref=e347]: 以前 vs 现在
+          - generic [ref=e348]: 拉出历史维度，证明问题不是偶然。
+          - generic [ref=e349]: 横向比
+          - generic [ref=e350]: 对别人 vs 对自己
+          - generic [ref=e351]: 揭示双重标准，让对方难以自圆其说。
+          - generic [ref=e352]: 阶层比
+          - generic [ref=e353]: 被看低者 vs 自以为高者
+          - generic [ref=e354]: 制造价值反转，形成讽刺和压力。
+        - paragraph [ref=e355]: 一个观点，如果能找到三对矛盾，就能从“一句话”长成“一篇文章”。
+      - generic [ref=e356]:
+        - generic [ref=e357]: Page 15 · Body Paragraph Method
+        - generic [ref=e358]: Three Contradictions
+      - text: 讲课稿 · N 关闭
+    - generic [ref=e359]:
+      - generic [ref=e360]:
+        - generic [ref=e361]: Act III · Structural Rebuttal
+        - generic [ref=e362]: 16 / 26
+      - generic [ref=e363]:
+        - generic [ref=e364]: 核心亮点
+        - heading "预设假想敌 再逐条击破" [level=1] [ref=e365]:
+          - text: 预设假想敌
+          - text: 再逐条击破
+        - paragraph [ref=e366]: 好议论文不是只写“我赞成”，还要写“你可能反对，但你的反对站不住”。
+      - generic [ref=e367]:
+        - generic [ref=e368]: Act III · 驳论
+        - generic [ref=e369]: Targeted Thinking
+      - text: 讲课稿 · N 关闭
+    - generic [ref=e370]:
+      - generic [ref=e371]:
+        - generic [ref=e372]: Opponent Map · 六个假想敌
+        - generic [ref=e373]: 17 / 26
+      - generic [ref=e374]:
+        - generic [ref=e375]: 把反对者请到现场
+        - heading "韩愈预判了什么？" [level=2] [ref=e376]
+        - generic [ref=e377]:
+          - generic [ref=e378]:
+            - generic [ref=e379]: 拜年轻人为师丢人
+            - generic [ref=e380]: 吾师道也，庸知其年。用“道”替代年龄。
+          - generic [ref=e381]:
+            - generic [ref=e382]: 向地位低的人学失身份
+            - generic [ref=e383]: 无贵无贱，道之所存。提前封堵身份论。
+          - generic [ref=e384]:
+            - generic [ref=e385]: 成年人不需要专门拜师
+            - generic [ref=e386]: 爱其子择师，于其身耻师。揭出双重标准。
+          - generic [ref=e387]:
+            - generic [ref=e388]: 向底层人学习可耻
+            - generic [ref=e389]: 百工之人不耻相师，智反不能及。完成反转。
+          - generic [ref=e390]:
+            - generic [ref=e391]: 圣人不需要老师
+            - generic [ref=e392]: 孔子师郯子、苌弘、师襄、老聃。借圣人反驳圣人崇拜。
+          - generic [ref=e393]:
+            - generic [ref=e394]: 弟子不能超过老师
+            - generic [ref=e395]: 弟子不必不如师，师不必贤于弟子。主动越界，重设关系。
+      - generic [ref=e396]:
+        - generic [ref=e397]: Page 17 · Six Objections
+        - generic [ref=e398]: Prebuttal Map
+      - text: 讲课稿 · N 关闭
+    - generic [ref=e399]:
+      - generic [ref=e400]:
+        - generic [ref=e401]: Root Cause · 看透病根
+        - generic [ref=e402]: 18 / 26
+      - generic [ref=e403]:
+        - generic [ref=e404]:
+          - generic [ref=e405]: 结构性驳论的前提
+          - heading "先看透病根" [level=2] [ref=e406]
+          - paragraph [ref=e407]: “耻学于师”表面是一个态度，深层是六种心理：怕丢脸、怕降格、懒惰、双标、歧视、误解。
+          - generic [ref=e408]: 只有看清反对意见背后的原因，驳论才会刀刀见血，而不是隔靴搔痒。
+        - generic [ref=e410]:
+          - generic [ref=e411]: 年龄焦虑
+          - generic [ref=e412]: 身份焦虑
+          - generic [ref=e413]: 双重标准
+          - generic [ref=e414]: 职业歧视
+          - generic [ref=e415]: 圣人崇拜
+          - generic [ref=e416]: 师徒误解
+      - generic [ref=e417]:
+        - generic [ref=e418]: Page 18 · Root Causes
+        - generic [ref=e419]: Diagnose Before Argue
+      - text: 讲课稿 · N 关闭
+    - generic [ref=e420]:
+      - generic [ref=e421]:
+        - generic [ref=e422]: Exam Move · 考场操作
+        - generic [ref=e423]: 19 / 26
+      - generic [ref=e424]:
+        - generic [ref=e425]: 写作前 10 分钟
+        - heading "先搭一张“反对者地图”" [level=2] [ref=e426]
+        - generic [ref=e427]:
+          - generic [ref=e428]: Pre-writing · 反驳准备
+          - generic [ref=e429]:
+            - generic [ref=e430]:
+              - generic [ref=e431]: "01"
+              - generic [ref=e432]: 列反对句
+              - generic [ref=e433]: 也许有人会说什么？先写 3 到 5 句。
+            - generic [ref=e434]:
+              - generic [ref=e435]: "02"
+              - generic [ref=e436]: 找病根
+              - generic [ref=e437]: 他怕什么？误解什么？偷换了什么？
+            - generic [ref=e438]:
+              - generic [ref=e439]: "03"
+              - generic [ref=e440]: 分维度
+              - generic [ref=e441]: 年龄、身份、利益、现实、价值。
+            - generic [ref=e442]:
+              - generic [ref=e443]: "04"
+              - generic [ref=e444]: 排顺序
+              - generic [ref=e445]: 从最容易接受的共识，推到最强结论。
+            - generic [ref=e446]:
+              - generic [ref=e447]: "05"
+              - generic [ref=e448]: 写进文章
+              - generic [ref=e449]: 用“也许有人认为……但事实上……”落笔。
+        - generic [ref=e450]: 不是怕别人反驳，而是怕你不知道别人会怎么反驳。
+      - generic [ref=e451]:
+        - generic [ref=e452]: Page 19 · Press Arrow To Reveal Steps
+        - generic [ref=e453]: Prebuttal Workflow
+      - text: 讲课稿 · N 关闭
+    - generic [ref=e454]:
+      - generic [ref=e455]:
+        - generic [ref=e456]: Parallel Text · 《六国论》
+        - generic [ref=e457]: 20 / 26
+      - generic [ref=e458]:
+        - generic [ref=e459]: 同样的高手动作
+        - blockquote [ref=e460]:
+          - generic [ref=e461]: “或曰：六国互丧，
+          - generic [ref=e462]: 率赂秦耶？”
+        - paragraph [ref=e463]: 苏洵也不等别人反驳，自己先设问，再自己回答。
+      - generic [ref=e464]:
+        - generic [ref=e465]: Page 20 · Liu Guo Lun
+        - generic [ref=e466]: Question Before Answer
+      - text: 讲课稿 · N 关闭
+    - generic [ref=e467]:
+      - generic [ref=e468]:
+        - generic [ref=e469]: Pattern · 预辩句式
+        - generic [ref=e470]: 21 / 26
+      - generic [ref=e471]:
+        - generic [ref=e472]: 从古文到作文
+        - heading "把反对意见写成段落" [level=2] [ref=e473]
+        - generic [ref=e474]:
+          - paragraph [ref=e475]:
+            - text: 也许有人会认为……
+            - text: 但事实上……
+          - paragraph [ref=e476]: 前半句请反对者上场，后半句重设问题的判断标准。
+        - generic [ref=e477]:
+          - generic [ref=e478]:
+            - generic [ref=e479]: 先承认
+            - generic [ref=e480]: 承认对方看见了一部分现实。
+          - generic [ref=e481]:
+            - generic [ref=e482]: 再区分
+            - generic [ref=e483]: 指出他混淆了概念、对象或条件。
+          - generic [ref=e484]:
+            - generic [ref=e485]: 后反转
+            - generic [ref=e486]: 用更高标准收回论证主动权。
+      - generic [ref=e487]:
+        - generic [ref=e488]: Page 21 · Transfer Pattern
+        - generic [ref=e489]: Maybe, But
+      - text: 讲课稿 · N 关闭
+    - generic [ref=e490]:
+      - generic [ref=e491]:
+        - generic [ref=e492]: Act IV · Practice
+        - generic [ref=e493]: 22 / 26
+      - generic [ref=e494]:
+        - generic [ref=e495]: 课后实战演练
+        - heading "吃苦耐劳 真的过时了吗？" [level=1] [ref=e496]:
+          - text: 吃苦耐劳
+          - text: 真的过时了吗？
+        - paragraph [ref=e497]: 仿照《师说》的开头结构、三组对比和预设反驳，写一篇议论文提纲。
+      - generic [ref=e498]:
+        - generic [ref=e499]: Act IV · Application
+        - generic [ref=e500]: Write With An Opponent
+      - text: 讲课稿 · N 关闭
+    - generic [ref=e501]:
+      - generic [ref=e502]:
+        - generic [ref=e503]: Practice 01 · 开头模板
+        - generic [ref=e504]: 23 / 26
+      - generic [ref=e505]:
+        - generic [ref=e506]: 仿照第一段
+        - heading "七步写开头" [level=2] [ref=e507]
+        - generic [ref=e508]:
+          - generic [ref=e509]:
+            - generic [ref=e510]: "01"
+            - generic [ref=e511]: 中心论点
+            - generic [ref=e512]: 吃苦耐劳并未过时。
+          - generic [ref=e513]:
+            - generic [ref=e514]: "02"
+            - generic [ref=e515]: 核心定义
+            - generic [ref=e516]: 它不是盲目受苦，而是长期投入。
+          - generic [ref=e517]:
+            - generic [ref=e518]: "03"
+            - generic [ref=e519]: 普遍前提
+            - generic [ref=e520]: 任何选择都需要能力支撑。
+          - generic [ref=e521]:
+            - generic [ref=e522]: "04"
+            - generic [ref=e523]: 反面后果
+            - generic [ref=e524]: 不愿承担必要成本，机会也会落空。
+          - generic [ref=e525]:
+            - generic [ref=e526]: "05"
+            - generic [ref=e527]: 择标标准
+            - generic [ref=e528]: 苦要吃在方向、方法和复盘上。
+          - generic [ref=e529]:
+            - generic [ref=e530]: "06"
+            - generic [ref=e531]: 反驳偏见
+            - generic [ref=e532]: 反对无效内卷，不等于反对努力。
+          - generic [ref=e533]:
+            - generic [ref=e534]: "07"
+            - generic [ref=e535]: 总结金句
+            - generic [ref=e536]: 耐劳之所存，成长之所存。
+      - generic [ref=e537]:
+        - generic [ref=e538]: Page 23 · Opening Exercise
+        - generic [ref=e539]: Seven Slots
+      - text: 讲课稿 · N 关闭
+    - generic [ref=e540]:
+      - generic [ref=e541]:
+        - generic [ref=e542]: Practice 02 · 本论提纲
+        - generic [ref=e543]: 24 / 26
+      - generic [ref=e544]:
+        - generic [ref=e545]: 仿照三组对比
+        - heading "把观点写成立体论证" [level=2] [ref=e546]
+        - generic [ref=e547]:
+          - generic [ref=e548]:
+            - generic [ref=e549]: "01"
+            - generic [ref=e550]: 过去 vs 现在
+            - generic [ref=e551]: 过去需要体力耐劳，今天更需要认知耐劳、情绪耐劳和长期复盘。
+          - generic [ref=e552]:
+            - generic [ref=e553]: "02"
+            - generic [ref=e554]: 对别人 vs 对自己
+            - generic [ref=e555]: 我们赞赏他人的长期坚持，却常把自己的逃避包装成“看透内卷”。
+          - generic [ref=e556]:
+            - generic [ref=e557]: "03"
+            - generic [ref=e558]: “傻”人 vs “精”人
+            - generic [ref=e559]: 真正精明的人不是拒绝吃苦，而是选择值得吃的苦，并让每次投入产生积累。
+      - generic [ref=e560]:
+        - generic [ref=e561]: Page 24 · Body Outline
+        - generic [ref=e562]: Three Contrasts Applied
+      - text: 讲课稿 · N 关闭
+    - generic [ref=e563]:
+      - generic [ref=e564]:
+        - generic [ref=e565]: Practice 03 · 预设反驳
+        - generic [ref=e566]: 25 / 26
+      - generic [ref=e567]:
+        - generic [ref=e568]: 仿照结构性驳论
+        - heading "至少列出两个假想敌" [level=2] [ref=e569]
+        - generic [ref=e570]:
+          - generic [ref=e571]:
+            - generic [ref=e572]: Opponent 01
+            - generic [ref=e573]: “苦干只会被剥削”
+            - generic [ref=e574]: 反驳思路：批判剥削不等于否定努力。真正要反对的是没有方向、没有权益、没有成长的消耗。
+          - generic [ref=e575]:
+            - generic [ref=e576]: Opponent 02
+            - generic [ref=e577]: “选择比努力重要”
+            - generic [ref=e578]: 反驳思路：选择当然重要，但选择能力本身来自长期学习、观察、试错和复盘。
+        - generic [ref=e579]: 你越能替反对者把话说清楚，你的反驳就越有力量。
+      - generic [ref=e580]:
+        - generic [ref=e581]: Page 25 · Rebuttal Exercise
+        - generic [ref=e582]: Opponent Sentences
+      - text: 讲课稿 · N 关闭
+    - generic [ref=e583]:
+      - generic [ref=e584]:
+        - generic [ref=e585]: Closing · Takeaway
+        - generic [ref=e586]: 26 / 26
+      - generic [ref=e587]:
+        - generic [ref=e588]: 最后记住一句话
+        - blockquote [ref=e589]:
+          - generic [ref=e590]: 好文章不是写出来的，
+          - generic [ref=e591]: 是辩出来的。
+        - paragraph [ref=e592]: 不怕别人骂，就怕没人骂。把反对意见写进文章，你的论证才真正开始发力。
+      - generic [ref=e593]:
+        - generic [ref=e594]: End · Debate Before Writing
+        - generic [ref=e595]: Han Yu Method
+      - text: 讲课稿 · N 关闭
+  - generic [ref=e596]:
+    - button "Page 1" [ref=e597] [cursor=pointer]
+    - button "Page 2" [ref=e598] [cursor=pointer]
+    - button "Page 3" [ref=e599] [cursor=pointer]
+    - button "Page 4" [ref=e600] [cursor=pointer]
+    - button "Page 5" [ref=e601] [cursor=pointer]
+    - button "Page 6" [ref=e602] [cursor=pointer]
+    - button "Page 7" [ref=e603] [cursor=pointer]
+    - button "Page 8" [ref=e604] [cursor=pointer]
+    - button "Page 9" [ref=e605] [cursor=pointer]
+    - button "Page 10" [ref=e606] [cursor=pointer]
+    - button "Page 11" [ref=e607] [cursor=pointer]
+    - button "Page 12" [ref=e608] [cursor=pointer]
+    - button "Page 13" [ref=e609] [cursor=pointer]
+    - button "Page 14" [ref=e610] [cursor=pointer]
+    - button "Page 15" [ref=e611] [cursor=pointer]
+    - button "Page 16" [ref=e612] [cursor=pointer]
+    - button "Page 17" [ref=e613] [cursor=pointer]
+    - button "Page 18" [ref=e614] [cursor=pointer]
+    - button "Page 19" [ref=e615] [cursor=pointer]
+    - button "Page 20" [ref=e616] [cursor=pointer]
+    - button "Page 21" [ref=e617] [cursor=pointer]
+    - button "Page 22" [ref=e618] [cursor=pointer]
+    - button "Page 23" [ref=e619] [cursor=pointer]
+    - button "Page 24" [ref=e620] [cursor=pointer]
+    - button "Page 25" [ref=e621] [cursor=pointer]
+    - button "Page 26" [ref=e622] [cursor=pointer]

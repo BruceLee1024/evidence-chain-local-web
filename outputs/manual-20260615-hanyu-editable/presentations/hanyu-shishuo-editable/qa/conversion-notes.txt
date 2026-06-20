@@ -1,0 +1,6 @@
+Task mode: HTML-to-editable-PPT conversion
+Profile: targeted editable conversion
+Source caveat: original index.html was missing from disk during conversion; content was reconstructed from the generated 26-slide deck text in the current session.
+Fidelity choice: editable PPT objects over pixel-perfect raster screenshots.
+Preserved: visible Chinese lesson content, page rhythm, light/dark kraft-paper palette, cards, tables, comparison layouts, and speaker notes.
+Not preserved: WebGL background, browser keyboard navigation, ESC index, B low-power mode, and step-by-step web animations.

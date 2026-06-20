@@ -1,0 +1,17 @@
+import { ensureArtifactToolWorkspace, importArtifactTool, createSlideContext } from '/Users/bruce/.codex/plugins/cache/openai-primary-runtime/presentations/26.601.10930/skills/presentations/scripts/artifact_tool_utils.mjs';
+const workspace = '/Users/bruce/Desktop/证据链管理系统搭建/outputs/manual-20260615-hanyu-editable/presentations/hanyu-shishuo-editable';
+await ensureArtifactToolWorkspace(workspace);
+const artifact = await importArtifactTool(workspace);
+const { Presentation, PresentationFile } = artifact;
+const p = Presentation.create({ slideSize: { width: 1280, height: 720 } });
+const ctx = createSlideContext(artifact, { slideSize: { width: 1280, height: 720 }, workspaceDir: workspace });
+const s = p.slides.add();
+s.background.fill = '#eedfc7';
+ctx.addText(s, { left: 80, top: 120, width: 900, height: 120, text: '可编辑 PPT 测试', fontSize: 56, color: '#2a1e13', bold: true, face: 'Noto Serif SC' });
+console.log('slide keys', Object.keys(s));
+console.log('notes', typeof s.speakerNotes, typeof s.notes, Object.keys(s).filter(k => /note/i.test(k)));
+const blob = await PresentationFile.exportPptx(p);
+await blob.save(workspace + '/output/smoke.pptx');
+const png = await p.export({ slide: s, format: 'png', scale: 1 });
+const fs = await import('node:fs/promises');
+await fs.writeFile(workspace + '/preview/smoke.png', Buffer.from(await png.arrayBuffer()));

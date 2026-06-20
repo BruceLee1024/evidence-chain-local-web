@@ -408,6 +408,7 @@ select option {
 }
 
 .workspace {
+  align-items: stretch;
   display: grid;
   gap: 16px;
   grid-template-columns: minmax(0, 1.45fr) minmax(360px, 0.75fr);
@@ -418,13 +419,51 @@ select option {
   min-width: 0;
 }
 
+.workspace-main {
+  display: flex;
+  flex-direction: column;
+}
+
 .workspace-side {
   background: linear-gradient(180deg, rgba(24, 43, 65, 0.88), rgba(17, 32, 50, 0.88));
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
   min-height: 220px;
   padding: 18px;
+}
+
+.evidence-workspace .workspace-side {
+  margin-top: 54px;
+}
+
+.project-gate-panel {
+  align-content: start;
+  display: grid;
+  min-height: 300px;
+}
+
+.project-gate-panel h2 {
+  color: #f4f8ff;
+  font-size: 22px;
+  line-height: 1.3;
+  margin: 22px 0 8px;
+}
+
+.project-gate-panel p,
+.project-gate-side p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 620px;
+}
+
+.project-gate-panel button {
+  justify-self: start;
+  margin-top: 24px;
 }
 
 .tabs {
@@ -447,6 +486,7 @@ select option {
 }
 
 .form-panel {
+  flex: 1;
   padding: 20px;
 }
 

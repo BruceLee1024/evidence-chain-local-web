@@ -42,6 +42,12 @@ export const api = {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     }),
+  assistantChat: (payload) =>
+    request('/api/ai/assistant/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }),
   ocrExtract: (evidenceType, files) => {
     const formData = new FormData();
     formData.append('evidenceType', evidenceType);

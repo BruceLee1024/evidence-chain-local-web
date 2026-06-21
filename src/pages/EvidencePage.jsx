@@ -1,14 +1,35 @@
 import { ClipboardList } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { api } from '../api.js';
 import { evidenceLabels, evidenceTypes } from '../domain.js';
-import { AiRecognizeButton, AiResultNote, createWatermarkedImage, EmptyText, Field, FileDrop, FormPanel, LocationField, SectionTitle, SelectField, SubmitButton, Textarea, UnitField } from '../components.jsx';
+import { AiRecognizeButton, AiResultNote, applyDraftToForm, createWatermarkedImage, EmptyText, EvidenceList, Field, FileDrop, FormPanel, LocationField, SectionTitle, SelectField, SubmitButton, Textarea, UnitField } from '../components.jsx';
 
-export function EvidencePage({ projectId, evidence, locations, runAction }) {
+export function EvidencePage({ projectId, evidence, locations, runAction, assistantDraft, onAssistantDraftApplied, onModeChange }) {
   const [mode, setMode] = useState('variation');
+  const workspaceRef = useRef(null);
   const visibleEvidence = evidence.filter((item) => evidenceTypes.includes(item.type));
+
+  useEffect(() => {
+    onModeChange?.(mode);
+  }, [mode, onModeChange]);
+
+  useEffect(() => {
+    if (!assistantDraft) return;
+    if (assistantDraft.type !== mode) {
+      setMode(assistantDraft.type);
+      return;
+    }
+    const timer = window.setTimeout(() => {
+      const form = workspaceRef.current?.querySelector('form.form-panel');
+      if (!form) return;
+      applyDraftToForm(form, assistantDraft.fields || {});
+      onAssistantDraftApplied?.();
+    }, 0);
+    return () => window.clearTimeout(timer);
+  }, [assistantDraft, mode, onAssistantDraftApplied]);
+
   return (
-    <section className="workspace evidence-workspace">
+    <section className="workspace evidence-workspace" ref={workspaceRef}>
       <div className="workspace-main">
         <div className="tabs">
           {evidenceTypes.map((type) => (

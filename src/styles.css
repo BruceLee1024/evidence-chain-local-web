@@ -1245,6 +1245,202 @@ tr.selected {
   width: 100%;
 }
 
+.assistant-widget {
+  bottom: 24px;
+  display: grid;
+  gap: 12px;
+  justify-items: end;
+  position: fixed;
+  right: 24px;
+  z-index: 35;
+}
+
+.assistant-bubble {
+  border-radius: 999px;
+  box-shadow: 0 18px 42px rgba(25, 116, 237, 0.42);
+  height: 58px;
+  padding: 0;
+  width: 58px;
+}
+
+.assistant-panel {
+  background: linear-gradient(180deg, rgba(24, 43, 65, 0.98), rgba(12, 26, 44, 0.98));
+  border: 1px solid rgba(144, 166, 190, 0.32);
+  border-radius: 12px;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.46);
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  max-height: 70vh;
+  overflow: hidden;
+  width: 380px;
+}
+
+.assistant-head {
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+}
+
+.assistant-head span,
+.assistant-head strong {
+  display: flex;
+}
+
+.assistant-head span {
+  align-items: center;
+  color: #8fc2ff;
+  font-size: 12px;
+  font-weight: 900;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.assistant-head strong {
+  color: #f4f8ff;
+  font-size: 15px;
+}
+
+.assistant-messages {
+  display: grid;
+  gap: 10px;
+  overflow: auto;
+  padding: 14px;
+}
+
+.assistant-hint {
+  background: var(--amber-soft);
+  border: 1px solid rgba(215, 155, 50, 0.28);
+  border-radius: 9px;
+  color: #ffd076;
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 0;
+  padding: 10px;
+}
+
+.assistant-quick-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.assistant-quick-actions button {
+  min-height: 34px;
+  padding-inline: 11px;
+}
+
+.assistant-message {
+  border-radius: 10px;
+  display: grid;
+  gap: 7px;
+  max-width: 92%;
+  padding: 10px 11px;
+}
+
+.assistant-message p {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.assistant-message small {
+  color: var(--subtle);
+  font-size: 11px;
+}
+
+.assistant-basis {
+  background: rgba(95, 163, 255, 0.12);
+  border: 1px solid rgba(95, 163, 255, 0.24);
+  border-radius: 999px;
+  color: #9fc9ff;
+  display: inline-flex;
+  font-size: 11px;
+  font-weight: 850;
+  justify-self: start;
+  padding: 4px 8px;
+}
+
+.assistant-message.assistant {
+  background: rgba(13, 27, 45, 0.72);
+  border: 1px solid var(--line);
+  color: #d9e8f8;
+  justify-self: start;
+}
+
+.assistant-message.user {
+  background: linear-gradient(180deg, #338dff, #176bd6);
+  border: 1px solid rgba(142, 198, 255, 0.42);
+  color: #ffffff;
+  justify-self: end;
+}
+
+.assistant-message.error {
+  background: var(--red-soft);
+  border-color: rgba(239, 107, 115, 0.34);
+  color: #ffb3b8;
+}
+
+.assistant-draft {
+  background: rgba(7, 17, 31, 0.72);
+  border: 1px solid rgba(95, 163, 255, 0.24);
+  border-radius: 9px;
+  display: grid;
+  gap: 5px;
+  padding: 10px;
+}
+
+.assistant-draft strong,
+.assistant-draft span,
+.assistant-draft em {
+  display: block;
+  font-size: 12px;
+}
+
+.assistant-draft strong {
+  color: #f2f7ff;
+}
+
+.assistant-draft span {
+  color: #9fc9ff;
+}
+
+.assistant-draft em {
+  color: #ffd076;
+  font-style: normal;
+  line-height: 1.45;
+}
+
+.assistant-draft button {
+  margin-top: 4px;
+  min-height: 34px;
+  width: 100%;
+}
+
+.assistant-input-row {
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr 40px;
+  padding: 12px;
+}
+
+.assistant-input-row input {
+  background: rgba(13, 26, 43, 0.86);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  min-height: 40px;
+  outline: none;
+  padding: 9px 11px;
+}
+
+.assistant-input-row input:focus {
+  border-color: rgba(95, 163, 255, 0.72);
+  box-shadow: 0 0 0 3px rgba(47, 135, 255, 0.16);
+}
+
 @media (max-width: 900px) {
   body {
     min-width: 0;
@@ -1334,5 +1530,26 @@ tr.selected {
 
   .column-select {
     grid-template-columns: 1fr;
+  }
+
+  .assistant-widget {
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+  }
+
+  .assistant-widget:not(.open) {
+    left: auto;
+  }
+
+  .assistant-panel {
+    border-radius: 12px 12px 10px 10px;
+    max-height: 72vh;
+    width: 100%;
+  }
+
+  .assistant-bubble {
+    height: 54px;
+    width: 54px;
   }
 }

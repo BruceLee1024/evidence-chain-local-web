@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { api } from './api.js';
+import { AssistantWidget } from './AssistantWidget.jsx';
 import { resolveNavigationState } from './navigationState.js';
 import { DashboardPage } from './pages/DashboardPage.jsx';
 import { EvidencePage } from './pages/EvidencePage.jsx';
@@ -35,6 +36,8 @@ export default function App() {
   const [sessions, setSessions] = useState([]);
   const [toast, setToast] = useState('');
   const [loading, setLoading] = useState(false);
+  const [pendingAssistantDraft, setPendingAssistantDraft] = useState(null);
+  const [activeEvidenceType, setActiveEvidenceType] = useState('variation');
 
   const activeProject = projects.find((project) => project.id === projectId);
   const navigationState = resolveNavigationState({ page, hasProject: Boolean(projectId) });
@@ -77,6 +80,17 @@ export default function App() {
     } finally {
       setLoading(false);
     }
+  }
+
+  function handleAssistantDraft(draft) {
+    setPendingAssistantDraft(draft);
+    setPage('evidence');
+  }
+
+  function handleAssistantDraftApplied() {
+    setPendingAssistantDraft(null);
+    setToast('AI 草稿已填入，请检查后保存');
+    window.setTimeout(() => setToast(''), 2600);
   }
 
   return (
@@ -146,6 +160,9 @@ export default function App() {
                 evidence={evidence}
                 locations={overview?.locations || []}
                 runAction={runAction}
+                assistantDraft={pendingAssistantDraft}
+                onAssistantDraftApplied={handleAssistantDraftApplied}
+                onModeChange={setActiveEvidenceType}
               />
             )}
             {page === 'package' && (
@@ -171,6 +188,12 @@ export default function App() {
           </>
         )}
       </main>
+      <AssistantWidget
+        projectId={projectId}
+        currentPage={page}
+        currentEvidenceType={activeEvidenceType}
+        onApplyDraft={handleAssistantDraft}
+      />
     </div>
   );
 }

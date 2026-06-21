@@ -198,7 +198,7 @@ export function CompletenessBadge({ item }) {
   return <span className={`completeness-badge ${item.status}`}>{labels[item.status] || item.status}</span>;
 }
 
-function applyDraftToForm(form, fields) {
+export function applyDraftToForm(form, fields) {
   if (!form) return;
   for (const [key, value] of Object.entries(fields)) {
     const field = form.elements.namedItem(key);

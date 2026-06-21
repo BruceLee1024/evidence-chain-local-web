@@ -4,7 +4,13 @@ const limits = [
   ['src/App.jsx', 220],
   ['src/pages/PackagePage.jsx', 430],
   ['src/components.jsx', 380],
-  ['server/app.js', 760]
+  ['shared/evidenceDomain.js', 80],
+  ['server/app.js', 80],
+  ['server/routes/ai.js', 120],
+  ['server/routes/evidence.js', 260],
+  ['server/routes/projects.js', 100],
+  ['server/routes/search.js', 100],
+  ['server/routes/settlements.js', 380]
 ];
 
 const failures = [];

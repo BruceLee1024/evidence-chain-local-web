@@ -1,12 +1,8 @@
-export const evidenceLabels = {
-  variation: '签证变更单',
-  hidden: '隐蔽工程记录',
-  material: '材料进场记录',
-  monthly: '月度计量记录',
-  supplemental: '后补资料'
-};
+import { EVIDENCE_LABELS, EVIDENCE_TYPES } from '../shared/evidenceDomain.js';
 
-export const evidenceTypes = ['variation', 'hidden', 'material', 'monthly'];
+export const evidenceLabels = EVIDENCE_LABELS;
+
+export const evidenceTypes = EVIDENCE_TYPES;
 
 export const statusLabels = {
   matched: '已匹配',

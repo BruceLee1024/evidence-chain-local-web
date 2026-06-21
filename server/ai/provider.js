@@ -127,6 +127,7 @@ export function buildAiConfig(env = process.env, savedSettings = {}) {
     embeddingModel: savedSettings.embeddingModel || env.AI_EMBEDDING_MODEL || defaults.embeddingModel || savedSettings.model || env.AI_MODEL || defaults.model,
     supportsVision: normalizeSupportsVision(savedSettings.supportsVision, env.AI_SUPPORTS_VISION, defaults.supportsVision),
     timeoutMs: Number(savedSettings.timeoutMs || env.AI_TIMEOUT_MS || 15000),
+    retryDelayMs: Number(savedSettings.retryDelayMs || env.AI_RETRY_DELAY_MS || 1000),
     features: parseFeatures(savedSettings.features || env.AI_FEATURES)
   };
 }
@@ -265,6 +266,20 @@ export class CompatibleAiProvider {
       throw new Error('AI 未配置：请在环境变量中设置 AI_API_KEY，或选择 ollama 本地模型');
     }
 
+    let lastError;
+    for (let attempt = 0; attempt < 2; attempt += 1) {
+      try {
+        return await this.performRequest(path, body);
+      } catch (error) {
+        lastError = error;
+        if (attempt === 1 || !isRetriableAiError(error)) throw error;
+        await delay(Number(this.config.retryDelayMs ?? 1000));
+      }
+    }
+    throw lastError;
+  }
+
+  async performRequest(path, body) {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), this.config.timeoutMs);
     try {
@@ -279,7 +294,9 @@ export class CompatibleAiProvider {
       });
       const payload = await response.json().catch(() => ({}));
       if (!response.ok) {
-        throw new Error(payload?.error?.message || payload?.message || 'AI 调用失败');
+        const error = new Error(payload?.error?.message || payload?.message || 'AI 调用失败');
+        error.status = response.status;
+        throw error;
       }
       return payload;
     } finally {
@@ -338,4 +355,15 @@ function maskApiKey(value) {
 
 function modelOptionsFrom(model) {
   return [{ value: model, label: model }];
+}
+
+function isRetriableAiError(error) {
+  if (error?.name === 'AbortError') return true;
+  if (error?.status) return error.status === 429 || error.status >= 500;
+  return true;
+}
+
+function delay(ms) {
+  if (!ms) return Promise.resolve();
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }

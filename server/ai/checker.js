@@ -1,9 +1,4 @@
-const TYPE_LABELS = {
-  hidden: '隐蔽工程验收记录',
-  material: '材料进场记录',
-  monthly: '月度计量确认单',
-  variation: '签证变更单'
-};
+import { EVIDENCE_LABELS } from '../../shared/evidenceDomain.js';
 
 export function checkSettlementCompleteness({ items, links, evidence }) {
   const evidenceById = new Map(evidence.map((record) => [record.id, record]));
@@ -23,7 +18,7 @@ export function checkSettlementCompleteness({ items, links, evidence }) {
       status,
       expectedTypes,
       missingTypes,
-      suggestions: missingTypes.map((type) => `建议补充${TYPE_LABELS[type] || type}`)
+      suggestions: missingTypes.map((type) => `建议补充${EVIDENCE_LABELS[type] || type}`)
     };
   });
 }

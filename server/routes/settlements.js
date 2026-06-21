@@ -28,8 +28,7 @@ import {
 } from '../repository.js';
 import { attachFileToEvidence, persistUpload } from '../fileStore.js';
 import { getDb } from '../db.js';
-
-const evidenceTypesForAi = new Set(['variation', 'hidden', 'material', 'monthly']);
+import { EVIDENCE_TYPES_FOR_AI, SUPPLEMENTAL_EVIDENCE_TYPE } from '../../shared/evidenceDomain.js';
 
 export function createSettlementRouter(upload) {
   const router = Router({ mergeParams: true });
@@ -77,7 +76,7 @@ export function createSettlementRouter(upload) {
       const config = currentAiConfig();
       if (!config.enabled) return res.status(400).json({ error: 'AI 未配置：请先配置国内模型 API Key' });
       const items = listSettlementItems(req.params.sessionId);
-      const evidence = listEvidence(req.params.projectId).filter((record) => evidenceTypesForAi.has(record.type));
+      const evidence = listEvidence(req.params.projectId).filter((record) => EVIDENCE_TYPES_FOR_AI.has(record.type));
       const existingLinks = listSettlementLinks(req.params.sessionId);
       const candidates = await buildAiMatchCandidates({
         provider: createAiProvider(config),
@@ -130,7 +129,7 @@ export function createSettlementRouter(upload) {
     try {
       const item = req.settlementItem;
       const evidence = createEvidence(req.params.projectId, {
-        type: 'supplemental',
+        type: SUPPLEMENTAL_EVIDENCE_TYPE,
         title: `后补资料-${item.name}`,
         location: item.location,
         evidenceDate: new Date().toISOString().slice(0, 10),
@@ -226,7 +225,7 @@ function applyInitialMatching(projectId, sessionId) {
     endDate: item.endDate,
     amount: item.amount
   }));
-  const evidence = listEvidence(projectId).filter((record) => evidenceTypesForAi.has(record.type));
+  const evidence = listEvidence(projectId).filter((record) => EVIDENCE_TYPES_FOR_AI.has(record.type));
   const matches = matchEvidenceForItems(sessionItems, evidence);
 
   for (const match of matches) {

@@ -127,6 +127,79 @@ describe('createAiProvider', () => {
       max_tokens: 8
     });
   });
+
+  it('retries a transient network failure once before returning a successful response', async () => {
+    const fetchMock = vi.spyOn(globalThis, 'fetch')
+      .mockRejectedValueOnce(new Error('socket hang up'))
+      .mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({
+          choices: [{ message: { content: '{"ok":true}' } }]
+        })
+      });
+    const provider = createAiProvider({
+      provider: 'deepseek',
+      enabled: true,
+      apiKey: 'test-key',
+      baseUrl: 'https://api.deepseek.com',
+      model: 'deepseek-v4-flash',
+      timeoutMs: 15000,
+      retryDelayMs: 0
+    });
+
+    await expect(provider.chatJson({ messages: [], model: 'deepseek-v4-flash' })).resolves.toEqual({ ok: true });
+
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+  });
+
+  it('does not retry non-retriable authentication errors', async () => {
+    const fetchMock = vi.spyOn(globalThis, 'fetch').mockResolvedValue({
+      ok: false,
+      status: 401,
+      json: async () => ({ error: { message: 'invalid api key' } })
+    });
+    const provider = createAiProvider({
+      provider: 'deepseek',
+      enabled: true,
+      apiKey: 'bad-key',
+      baseUrl: 'https://api.deepseek.com',
+      model: 'deepseek-v4-flash',
+      timeoutMs: 15000,
+      retryDelayMs: 0
+    });
+
+    await expect(provider.chatJson({ messages: [], model: 'deepseek-v4-flash' })).rejects.toThrow('invalid api key');
+
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+
+  it('retries rate-limit responses once', async () => {
+    const fetchMock = vi.spyOn(globalThis, 'fetch')
+      .mockResolvedValueOnce({
+        ok: false,
+        status: 429,
+        json: async () => ({ error: { message: 'rate limited' } })
+      })
+      .mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({
+          choices: [{ message: { content: '{"ok":true}' } }]
+        })
+      });
+    const provider = createAiProvider({
+      provider: 'deepseek',
+      enabled: true,
+      apiKey: 'test-key',
+      baseUrl: 'https://api.deepseek.com',
+      model: 'deepseek-v4-flash',
+      timeoutMs: 15000,
+      retryDelayMs: 0
+    });
+
+    await expect(provider.chatJson({ messages: [], model: 'deepseek-v4-flash' })).resolves.toEqual({ ok: true });
+
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+  });
 });
 
 describe('extractJsonObject', () => {

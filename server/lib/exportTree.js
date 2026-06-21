@@ -1,13 +1,6 @@
 import path from 'node:path';
 import { normalizeLocation } from './matching.js';
-
-const typeLabels = {
-  variation: '签证变更单',
-  hidden: '隐蔽工程记录',
-  material: '材料进场记录',
-  monthly: '月度计量记录',
-  supplemental: '后补资料'
-};
+import { evidenceLabel } from '../../shared/evidenceDomain.js';
 
 export function buildExportTree({ sessionName, items, links, evidence, files }) {
   const evidenceById = new Map(evidence.map((record) => [record.id, record]));
@@ -47,7 +40,7 @@ export function buildItemFolderName(item, index) {
 }
 
 function buildExportName(evidence, file) {
-  const label = typeLabels[evidence.type] || '证据';
+  const label = evidenceLabel(evidence.type, '证据');
   const title = sanitizeSegment(evidence.title || evidence.code || evidence.id);
   const originalName = sanitizeSegment(file.originalName || path.basename(file.path || '附件'));
   return `${label}_${title}_${originalName}`;
